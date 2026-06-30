@@ -109,6 +109,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <section id="services" className="py-16 bg-gray-50">
-        <div className="container-max">
+    </main>
+  );
+}
