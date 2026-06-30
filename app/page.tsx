@@ -158,6 +158,109 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="py-16 bg-white">
+        <div className="container-max">
+          <h2 className="section-title text-center">Blanco Septic Calendar: When Problems Strike</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            {[
+              {
+                month: 'Jan-Feb',
+                season: 'Winter',
+                risk: '🟢 LOW',
+                detail: 'Cold weather slows bacterial activity. Good time for inspections.'
+              },
+              {
+                month: 'Mar-May',
+                season: 'Spring',
+                risk: '🔴 HIGH',
+                detail: 'Heavy rains raise water table. Limestone clogs drain fields. Backups peak.'
+              },
+              {
+                month: 'Jun-Aug',
+                season: 'Summer',
+                risk: '🟡 MEDIUM',
+                detail: 'Heat stresses system. Monitor drain field. Watch for odors.'
+              },
+              {
+                month: 'Sep-Nov',
+                season: 'Fall',
+                risk: '🟡 MEDIUM',
+                detail: 'Leaves clog vents. Prep for winter freeze-thaw. Early pumping recommended.'
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="bg-gradient-to-br from-blue-50 to-blue-100 border-l-4 border-blue-600 p-6 rounded-lg">
+                <p className="text-xs font-bold text-blue-600 mb-2">{item.month}</p>
+                <h4 className="font-bold text-gray-900 mb-2">{item.season}</h4>
+                <p className="text-2xl font-bold mb-3">{item.risk}</p>
+                <p className="text-sm text-gray-700">{item.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gray-50">
+        <div className="container-max">
+          <h2 className="section-title text-center">How We Compare</h2>
+          <div className="overflow-x-auto">
+            <table className="comparison-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Generic Plumber</th>
+                  <th>Chain Company</th>
+                  <th>Blanco Septic Experts</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="font-bold">Septic Specialists</td>
+                  <td><span className="xmark">✗ No</span></td>
+                  <td><span className="xmark">✗ No</span></td>
+                  <td><span className="checkmark">✓ Yes</span></td>
+                </tr>
+                <tr>
+                  <td className="font-bold">Hill Country Experts</td>
+                  <td><span className="xmark">✗ No</span></td>
+                  <td><span className="xmark">✗ No</span></td>
+                  <td><span className="checkmark">✓ Limestone specialists</span></td>
+                </tr>
+                <tr>
+                  <td className="font-bold">Transparent Pricing</td>
+                  <td><span className="xmark">✗ Hidden fees</span></td>
+                  <td><span className="xmark">✗ Call for quote</span></td>
+                  <td><span className="checkmark">✓ Written estimates</span></td>
+                </tr>
+                <tr>
+                  <td className="font-bold">Photo Documentation</td>
+                  <td><span className="xmark">✗ No</span></td>
+                  <td><span className="xmark">✗ No</span></td>
+                  <td><span className="checkmark">✓ Every job</span></td>
+                </tr>
+                <tr>
+                  <td className="font-bold">24/7 Emergency</td>
+                  <td><span className="xmark">✗ No</span></td>
+                  <td><span className="checkmark">✓ Maybe</span></td>
+                  <td><span className="checkmark">✓ Always</span></td>
+                </tr>
+                <tr>
+                  <td className="font-bold">Local Since</td>
+                  <td>Unknown</td>
+                  <td>Corporate chain</td>
+                  <td><span className="checkmark">✓ 2010 (14 years)</span></td>
+                </tr>
+                <tr>
+                  <td className="font-bold">Licensed TCEQ</td>
+                  <td><span className="xmark">✗ Maybe</span></td>
+                  <td><span className="checkmark">✓ Corporate</span></td>
+                  <td><span className="checkmark">✓ Personal + team</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
