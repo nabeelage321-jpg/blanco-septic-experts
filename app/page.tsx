@@ -132,7 +132,7 @@ export default function Home() {
               },
               {
                 title: 'Tank Inspection',
-                desc: 'Professional inspection with photos. Know your system's health before problems develop.',
+                desc: desc: "Professional inspection with photos. Know your system's health before problems develop.",
                 details: 'Catch issues early: cracked tanks, failed drain fields, clogged vents.'
               },
               {
