@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://blancosepticexperts.vercel.app/sitemap.xml
+
+# Disallow crawling of unnecessary files
+Disallow: /_next/
+Disallow: /api/
