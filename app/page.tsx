@@ -109,6 +109,55 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section id="services" className="py-16 bg-gray-50">
+        <div className="container-max">
+          <h2 className="section-title text-center">Our Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                title: 'Septic Tank Pumping',
+                desc: 'Regular maintenance every 3-5 years. We pump, inspect for damage, and provide detailed reports.',
+                details: 'Blanco limestone soil may require more frequent pumping due to mineral buildup.'
+              },
+              {
+                title: '24/7 Emergency Repair',
+                desc: 'Backup? Odor? Wet lawn? We diagnose and fix. Same-day service for urgent issues.',
+                details: 'Hill Country groundwater rises in spring, backups common March-May.'
+              },
+              {
+                title: 'Tank Inspection',
+                desc: 'Professional inspection with photos. Know your systems health before problems develop.',
+                details: 'Catch issues early: cracked tanks, failed drain fields, clogged vents.'
+              },
+              {
+                title: 'Drain Field Repair',
+                desc: 'Failing drain field? We fix it. Limestone clay specialists with proven solutions.',
+                details: 'Blanco soil conditions require specialized drain field engineering.'
+              },
+              {
+                title: 'Tank Replacement',
+                desc: 'New tank installation built for Hill Country freeze-thaw cycles and limestone soil.',
+                details: 'We handle permits, installation, and warranty. TCEQ-compliant.'
+              },
+              {
+                title: 'Preventive Maintenance Plans',
+                desc: 'Regular monitoring prevents costly failures. Choose annual or multi-year plans.',
+                details: 'Recommended for older systems and limestone-challenged properties.'
+              }
+            ].map((service, idx) => (
+              <div key={idx} className="card">
+                <h3 className="text-lg font-bold text-blue-900 mb-2">{service.title}</h3>
+                <p className="text-gray-700 text-sm mb-3">{service.desc}</p>
+                <p className="text-xs text-gray-600 italic border-t pt-3">{service.details}</p>
+                <a href={`/services/${service.title.toLowerCase().replace(/ /g, '-')}`} className="text-blue-600 text-sm font-bold hover:text-blue-800 mt-3 inline-block">
+                  Learn More →
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
