@@ -63,6 +63,52 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </main>
-  );
-}
+
+      <section className="py-16 bg-white">
+        <div className="container-max">
+          <h2 className="section-title text-center">Why Blanco Trusts Us</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: '🎯',
+                title: 'Septic-Only Specialists',
+                desc: 'We focus exclusively on septic systems. 100% of our expertise goes to your tank, not 20 other services.'
+              },
+              {
+                icon: '🪨',
+                title: 'Hill Country Geology Experts',
+                desc: 'Blanco limestone clay soil is our specialty. We know Glen Rose Limestone, drain field challenges, and water table patterns.'
+              },
+              {
+                icon: '📸',
+                title: 'Photo-Documented Service',
+                desc: 'Every job documented with photos. You see exactly what was done, when, and by whom. No surprises.'
+              },
+              {
+                icon: '💰',
+                title: 'Transparent Pricing',
+                desc: 'Written quotes upfront. No hidden fees, no bait-and-switch. Inspection fee credited toward any approved work.'
+              },
+              {
+                icon: '🔧',
+                title: 'Licensed & Certified',
+                desc: 'Texas-licensed septic professionals under TCEQ regulations. Verified credentials, continuous education, annual renewal.'
+              },
+              {
+                icon: '⚡',
+                title: '24/7 Emergency Response',
+                desc: 'Backup happening now? We respond 24/7. Average response time under 2 hours in Blanco County.'
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="card text-center">
+                <div className="text-5xl mb-4">{item.icon}</div>
+                <h3 className="text-lg font-bold text-blue-900 mb-3">{item.title}</h3>
+                <p className="text-gray-700 text-sm">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="services" className="py-16 bg-gray-50">
+        <div className="container-max">
